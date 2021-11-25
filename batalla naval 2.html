@@ -1,0 +1,111 @@
+<script>
+
+    var tablero1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var tablero2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    var n = 1;
+    var barcos = 3;
+    var barcos1 = 0;
+    var barcos2 = 0;
+
+    while (n <= 3) {    
+        var posicion = parseInt(prompt("Ingresae barco numero"+n));
+            posicion = posicion-1;
+        if(posicion >= 0 && posicion <= 9){
+            if(tablero1[posicion] == 1){
+                alert("Posicion ocupada, intente con otra");
+            }
+            else{
+                tablero1[posicion] = 1;
+                n = n + 1;
+            }
+        }
+        else{
+            alert("Numero invalido, intente con otro")
+        }
+    }
+
+    console.log(tablero1);
+    n = 1;
+
+    while (n <= 3) {    
+        var posicion = parseInt(prompt("Ingrese barco numero"+n));
+            posicion = posicion-1;
+        if(posicion >= 0 && posicion <= 9){
+            if(tablero2[posicion] == 1){
+                alert("Posicion ocupada, intente con otra");
+            }
+            else{
+                tablero2[posicion] = 1;
+                n = n + 1;
+            }
+        }
+        else{
+            alert("Numero invalido, intente con otro")
+        }
+    }
+
+    console.log(tablero2);
+    n = 1;
+
+    //-----------------------------------------------------------------------------------------------------//
+
+    alert("Que comience el juegooooooo!")
+
+    while (n <= 20){
+        if(n % 2 != 0){
+            console.log("Jugador 1")
+            var tiro = parseInt(prompt("Ingrese tiro" + n));
+            tiro = tiro-1;
+            if(tiro >= 0 && tiro <= 9){
+                if(tablero2[tiro] == 1){
+                    tablero2[tiro] = 3;
+                    console.log("Hay barco, usted ha hundido un barco")
+                    barcos1 = barcos1 + 1;
+                    if(barcos1 == 3){
+                        alert("Ganador Jugador 1");
+                        break
+                    }
+                    console.log(tablero2);
+                }
+                else{
+                    tablero2[tiro] = 4;
+                    console.log("No hay barco, intente en otro sitio")
+                    console.log(tablero2);
+                    //n=n+1;
+                }
+            }
+            else{
+                console.log("Tiro invalido")
+            }
+            n=n+1;
+        }
+        else {
+            console.log("Jugador 2")
+            var tiro = parseInt(prompt("Ingrese tiro" + n));
+            tiro = tiro-1;
+            if(tiro >= 0 && tiro <= 9){
+                if(tablero1[tiro] == 1){
+                    tablero1[tiro] = 3;
+                    console.log("Hay barco, usted ha hundido un barco")
+                    barcos2 = barcos2 + 1;
+                    if(barcos2 == 3){
+                        alert("Ganador Jugador 2");
+                        break
+                    }
+                    console.log(tablero1);
+                }
+                else{
+                    tablero1[tiro] = 4;
+                    console.log("No hay barco, intente en otro sitio")
+                    console.log(tablero1);
+                    //n=n+1;
+                }
+            }
+            else{
+                console.log("Tiro invalido")
+            }
+            n = n + 1;
+        }
+    }
+
+</script>

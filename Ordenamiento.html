@@ -1,0 +1,43 @@
+<script>
+
+// ----- Burbuja -----
+// estructuras de repetición y arreglos, obvio también repetición
+
+
+// var numeros = [10, 8, 7, 9, 5, 3, 4, 6, 1, 2, 587, 400, 201, 0];
+// var comparar = false;
+// var orden = [];
+
+// console.log(numeros);
+
+//     while (!comparar){ 
+//         comparar = true; 
+//             for ( var i = 0; i < numeros.length; i++){
+//                 if (numeros[i] > numeros [i + 1]){
+//                     orden = numeros[i + 1];
+//                     numeros[i + 1] = numeros[i];
+//                     numeros[i] = orden;
+//                     comparar = false 
+//                 }
+//             }
+//         }
+
+//     console.log(numeros);
+
+    var datos = [100, 8, 250, 1, 6, 3, 7, 5] 
+
+console.log(datos);
+
+for(i = 0; i < datos.length; i++){
+    for(x = 0; x < datos.length; x++){
+        if (datos[x] > datos[x + 1]) {
+            var posicion = datos[x];
+            datos[x] = datos[x + 1]
+            datos[x + 1] = posicion;
+        }
+    }
+}
+console.log(datos);
+
+</script>
+

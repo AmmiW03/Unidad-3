@@ -1,0 +1,136 @@
+<script>
+
+    // var fila, mar, columna = new Array (7)
+
+    // for(var i = 0; i < 10; i++);
+    //     for(var j = 0; j < 10; j++);
+    //     mar = [i][j] + 10;
+    
+    // fila = parseInt(prompt("Ingrese la ubicación de su barco (1-7): "));
+    // if(fila >= 1 && fila <= 7){
+    //     columna = Math. round(Math.random() * 1);
+
+    //     for(var i = 0; columna[i] < 4; i++); 
+    //          mar(fila - 1)(columna + i) - 1;
+    //     for(var i = 0; i < 7; i++);
+    //         console.log(mar + "\t");
+    //     console.log("\n");
+    // } else {
+    //     console.log("Ingrese un rango valido (1-7): ");
+    // }
+
+//     package juego_barcos1;
+
+// import java.util.Scanner;
+
+// public class Juego_Barcos1 {
+
+//     public static void main(String[] args) {
+     
+//     Scanner leer = new Scanner (System.in);
+//         //Declaracion de variables
+//        int tablero; //Tamaño del tablero o arreglo
+//        int p1=0, p2=0; // Contadores de while para dar las posiciones a los barcos
+//        int posicion;//Posicion que va tomar el barco
+//        int a;//Numero de posibles ataques durante el juego
+//        int turno = 0;//Turno de cada jugador para atacar
+//        int jugador1, jugador2;//Posiciones que cada jugador va ingresar para 
+//        int barcos1=0, barcos2=0;
+        
+    var tablero = [];
+    var j1 = 0;
+    var j2 = 0;
+    var posicion = [];
+    var turno = 0;
+    var jugador1 = [];
+    var jugador2 = [];
+    var barcos1 = 0;
+    var barcos2 = 0;
+       
+//         System.out.println("---BIENVENIDO A BATALLA NAVAL---");
+    alert ("---BIENVENIDO A BATALLA NAVAL---");
+//         System.out.println(" Ingresa el tama単o del tablero  ");
+    prompt ("Ingrese la magnitud del tablero (1-1): ")
+//         tablero = leer.nextInt();
+//         System.out.println("");
+//         int tablero1 [] = new int [tablero]; //Declaracion del primer arreglo o tama単o del primer tablero
+    var tablero1 = [tablero];
+    var tablero2 = [tablero];
+//         int tablero2 [] = new int [tablero];//Declaracion del awgundo arreglo o tama単o del segundo tablero
+        
+//             for (int x = 0; x < tablero; x++) {
+//              tablero1 [x]=0; //Cada tablero se llena con 0 en todas las posiciones de los tableros
+//              tablero2 [x]=0;
+//             }
+//             System.out.println("Ingresa la cantidad de barcos que va utilizar....");
+//             barcos1=leer.nextInt();
+//             //El jugador 1 ingresa las posiciones en el primer arreglo
+//             System.out.println("");
+//             System.out.println("---POSICIONES DEL PRMER JUGADOR---");
+//             while (p1<barcos1){ //Solo puede ingresar 5 barcos en diferentes posiciones en el tablero
+//                 System.out.println("Ingrese la posicion en el tablero 1");
+//                 posicion = leer.nextInt();
+//                 tablero1[posicion]=1; //Se le asigna un 1 a la posision que el usuario elija, este es su barco
+//                 p1=p1+1;
+//             }
+//             System.out.println("");
+//             System.out.println("Ingresa la cantidad de barcos que va utilizar....");
+//             barcos2=leer.nextInt();
+//             System.out.println("");
+//             System.out.println("---POSICIONES DEL SEGUNDO JUGADOR");
+//              while (p2<barcos2){//Solo puede ingresar 5 barcos en diferentes posiciones en el tablero
+//                 System.out.println("Ingrese la posicion en el tablero 2");
+//                 posicion = leer.nextInt();
+//                 tablero2[posicion]=1;  //Se le asigna un 1 a la posision que el usuario elija, este es su barco
+//                 p2=p2+1;
+//             }
+             
+//             System.out.println("");
+//             System.out.println("---INICIO DEL JUEGO---");
+//             System.out.println("");
+            
+//             a=(tablero*5); //Posibles ataques que cada usuario puede hacer
+//             while(turno <=a){//Condicion para que el programa se repita, mientras las posibilidades de atacar no se agoten
+//                 //Cada usuario tiene un turno
+//                 //Numeros impares son el turno del jugador 1
+//                 //Numeros pares son el turno del jugador 2
+//                if(turno%2==0){//Condicion para saber si es par o impar
+//                    System.out.println("Jugador 1: ingresa ataque al jugador 2 en la posicion...");
+//                    jugador1 = leer.nextInt();
+//                     if(tablero2[jugador1]==1){ //Si la posicion de ataque tiene un 1, se va sustituir por un 0
+//                         tablero2[jugador1]=0;
+//                         barcos2 = barcos2 - 1;//Al contador de barcos se le restara 1
+//                     }
+//                     System.out.println("Al jugador 2 le quedan: "+barcos2);
+//                     System.out.println("");//Se mostrara un control del numero de barcos que se sobran al otro jugador
+//                }
+//                else{
+//                    System.out.println("Jugador 2: ingresa ataque al jugador 1 en la posicion...");
+//                    jugador2 = leer.nextInt();
+//                     if(tablero1[jugador2]==1){//Si la posicion de ataque tiene un 1, se va sustituir por un 0
+//                         tablero1[jugador2]=0;
+//                         barcos1 = barcos1 - 1;//Al contador de barcos se le restara 1
+//                     }
+//                     System.out.println("Al jugador 1 le quedan: "+barcos1);
+//                     System.out.println(""); //Se mostrara un control del numero de barcos que se sobran al otro jugador
+//                }
+//                if(barcos1 == 0){ //Cuando los barcos del jugador 1 se terminen el juego termina y el jugador 2 gana
+//                    System.out.println("");
+//                    System.out.println("---GANADOR: JUGADOR 2---");
+//                    return;
+//                }
+//                else{
+//                    if(barcos2 == 0){//Cuando los barcos del jugador 2 se terminen el juego termina y el jugador 1 gana
+//                    System.out.println("");
+//                    System.out.println("---GANADOR: JUGADOR 1---");
+//                    return;
+//                    }
+//                }
+//                turno = turno + 1;
+//             }
+//     }
+
+
+
+
+</script>
