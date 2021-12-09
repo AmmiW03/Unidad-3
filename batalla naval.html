@@ -8,7 +8,7 @@ var tablero1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     var barcos2 = 0;
 
     while (n <= 3) {    
-        var posicion = parseInt(prompt("Ingresae barco numero"+n));
+        var posicion = parseInt(prompt("Jugador 1 \n Ingrese barco numero"+n));
             posicion = posicion-1;
         if(posicion >= 0 && posicion <= 9){
             if(tablero1[posicion] == 1){
@@ -28,7 +28,7 @@ var tablero1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     n = 1;
 
     while (n <= 3) {    
-        var posicion = parseInt(prompt("Ingrese barco numero"+n));
+        var posicion = parseInt(prompt("Jugador 2 \n Ingrese barco numero"+n));
             posicion = posicion-1;
         if(posicion >= 0 && posicion <= 9){
             if(tablero2[posicion] == 1){
